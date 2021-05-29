@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "0e326d10-38c1-4979-91b0-9798f92b42d4",
+		"name": "Microservices Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "SESSION=f7e90797-21a3-42c4-ba21-07a30e76e9d0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderLineItemsList\":[\r\n        {\r\n            \"skuCode\":\"Apple IPhone\",\r\n            \"price\":100,\r\n            \"quantity\":10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
